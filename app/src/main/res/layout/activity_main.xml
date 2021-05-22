@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+    <TableRow
+            android:id="@+id/headTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amiko"
+                android:text="Smart Switch"
+                android:textColor="@color/headerTextColor"
+                android:textSize="34sp" />
+
+
+    </TableRow>
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headTable">
+
+        <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                    android:id="@+id/card_desklights"
+                    android:layout_width="@dimen/cardWidth"
+                    android:layout_height="@dimen/cardHeight"
+                    android:layout_marginLeft="@dimen/cardMargin"
+                    android:layout_marginTop="@dimen/cardMargin"
+                    android:layout_marginRight="@dimen/cardMargin"
+                    android:layout_marginBottom="@dimen/cardMargin"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:onClick="cardHandler"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="3dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <ImageView
+                            android:layout_width="@dimen/imageWidth"
+                            android:layout_height="@dimen/imageHeight"
+                            app:srcCompat="@drawable/light_neon" />
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_horizontal"
+                            android:text="Desk Lights"
+                            android:textSize="@dimen/divTextSize" />
+
+                    <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/spaceSize" />
+
+                    <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal">
+
+                        <Switch
+                                android:id="@+id/switch_desklights"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:clickable="false"
+                                android:onClick="switchHandler"
+                                android:tag="switch/main 3" />
+                    </TableRow>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                    android:id="@+id/card_fan"
+                    android:layout_width="@dimen/cardWidth"
+                    android:layout_height="@dimen/cardHeight"
+                    android:layout_marginLeft="@dimen/cardMargin"
+                    android:layout_marginTop="@dimen/cardMargin"
+                    android:layout_marginRight="@dimen/cardMargin"
+                    android:layout_marginBottom="@dimen/cardMargin"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:onClick="cardHandler"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="3dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <ImageView
+                            android:layout_width="@dimen/imageWidth"
+                            android:layout_height="@dimen/imageHeight"
+                            app:srcCompat="@drawable/fan_neon" />
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_horizontal"
+                            android:text="Ceiling Fan"
+                            android:textSize="@dimen/divTextSize" />
+
+                    <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/spaceSize" />
+
+                    <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal">
+
+                        <Switch
+                                android:id="@+id/switch_fan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:clickable="false"
+                                android:onClick="switchHandler"
+                                android:tag="switch/main 2" />
+                    </TableRow>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                    android:id="@+id/card_cfl"
+                    android:layout_width="@dimen/cardWidth"
+                    android:layout_height="@dimen/cardHeight"
+                    android:layout_marginLeft="@dimen/cardMargin"
+                    android:layout_marginTop="@dimen/cardMargin"
+                    android:layout_marginRight="@dimen/cardMargin"
+                    android:layout_marginBottom="@dimen/cardMargin"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:onClick="cardHandler"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="3dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <ImageView
+                            android:layout_width="@dimen/imageWidth"
+                            android:layout_height="@dimen/imageHeight"
+                            app:srcCompat="@drawable/light_neon" />
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_horizontal"
+                            android:text="CFL Light"
+                            android:textSize="@dimen/divTextSize" />
+
+                    <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/spaceSize" />
+
+                    <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal">
+
+                        <Switch
+                                android:id="@+id/switch_cfl"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:clickable="false"
+                                android:onClick="switchHandler"
+                                android:tag="switch/main 0" />
+                    </TableRow>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </TableRow>
+        <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                    android:id="@+id/card_backlights"
+                    android:layout_width="@dimen/cardWidth"
+                    android:layout_height="@dimen/cardHeight"
+                    android:layout_marginLeft="@dimen/cardMargin"
+                    android:layout_marginTop="@dimen/cardMargin"
+                    android:layout_marginRight="@dimen/cardMargin"
+                    android:layout_marginBottom="@dimen/cardMargin"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:onClick="cardHandler"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="3dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <ImageView
+                            android:layout_width="@dimen/imageWidth"
+                            android:layout_height="@dimen/imageHeight"
+                            app:srcCompat="@drawable/light_neon" />
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_horizontal"
+                            android:text="Back Lights"
+                            android:textSize="@dimen/divTextSize" />
+
+                    <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/spaceSize" />
+
+                    <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal">
+
+                        <Switch
+                                android:id="@+id/swith_backlights"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:clickable="false"
+                                android:onClick="switchHandler"
+                                android:tag="switch/main 1" />
+                    </TableRow>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                    android:id="@+id/card_mainssocket"
+                    android:layout_width="@dimen/cardWidth"
+                    android:layout_height="@dimen/cardHeight"
+                    android:layout_marginLeft="@dimen/cardMargin"
+                    android:layout_marginTop="@dimen/cardMargin"
+                    android:layout_marginRight="@dimen/cardMargin"
+                    android:layout_marginBottom="@dimen/cardMargin"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:onClick="cardHandler"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="3dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <ImageView
+                            android:layout_width="@dimen/imageWidth"
+                            android:layout_height="@dimen/imageHeight"
+                            app:srcCompat="@drawable/socket" />
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_horizontal"
+                            android:text="Mains Socket"
+                            android:textSize="@dimen/divTextSize" />
+
+                    <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/spaceSize" />
+
+                    <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal">
+
+                        <Switch
+                                android:id="@+id/switch_mainssocket"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:clickable="false"
+                                android:onClick="switchHandler"
+                                android:tag="switch/extra 0" />
+                    </TableRow>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                    android:id="@+id/card_upssocket"
+                    android:layout_width="@dimen/cardWidth"
+                    android:layout_height="@dimen/cardHeight"
+                    android:layout_marginLeft="@dimen/cardMargin"
+                    android:layout_marginTop="@dimen/cardMargin"
+                    android:layout_marginRight="@dimen/cardMargin"
+                    android:layout_marginBottom="@dimen/cardMargin"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:onClick="cardHandler"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="3dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <ImageView
+                            android:layout_width="@dimen/imageWidth"
+                            android:layout_height="@dimen/imageHeight"
+                            app:srcCompat="@drawable/socket" />
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_horizontal"
+                            android:text="UPS Socket"
+                            android:textSize="@dimen/divTextSize" />
+
+                    <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/spaceSize" />
+
+                    <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal">
+
+                        <Switch
+                                android:id="@+id/switch_upssocket"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:clickable="false"
+                                android:onClick="switchHandler"
+                                android:tag="switch/extra 1" />
+                    </TableRow>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </TableRow>
+        <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                    android:id="@+id/card_singlelight"
+                    android:layout_width="@dimen/cardWidth"
+                    android:layout_height="@dimen/cardHeight"
+                    android:layout_marginLeft="@dimen/cardMargin"
+                    android:layout_marginTop="@dimen/cardMargin"
+                    android:layout_marginRight="@dimen/cardMargin"
+                    android:layout_marginBottom="@dimen/cardMargin"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:onClick="cardHandler"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="3dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <ImageView
+                            android:layout_width="@dimen/imageWidth"
+                            android:layout_height="@dimen/imageHeight"
+                            app:srcCompat="@drawable/light_neon" />
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_horizontal"
+                            android:text="Single Light"
+                            android:textSize="@dimen/divTextSize" />
+
+                    <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/spaceSize" />
+
+                    <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal">
+
+                        <Switch
+                                android:id="@+id/switch_singlelight"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:clickable="false"
+                                android:onClick="switchHandler"
+                                android:tag="switch/extra 2" />
+                    </TableRow>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                    android:id="@+id/card_outerbulb"
+                    android:layout_width="@dimen/cardWidth"
+                    android:layout_height="@dimen/cardHeight"
+                    android:layout_marginLeft="@dimen/cardMargin"
+                    android:layout_marginTop="@dimen/cardMargin"
+                    android:layout_marginRight="@dimen/cardMargin"
+                    android:layout_marginBottom="@dimen/cardMargin"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:onClick="cardHandler"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="3dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <ImageView
+                            android:layout_width="@dimen/imageWidth"
+                            android:layout_height="@dimen/imageHeight"
+                            app:srcCompat="@drawable/light_neon" />
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_horizontal"
+                            android:text="Outer Bulb"
+                            android:textSize="@dimen/divTextSize" />
+
+                    <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/spaceSize" />
+
+
+                    <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal">
+
+                        <Switch
+                                android:id="@+id/switch_outerbulb"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:clickable="false"
+                                android:onClick="switchHandler"
+                                android:tag="switch/extra 3" />
+                    </TableRow>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </TableRow>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

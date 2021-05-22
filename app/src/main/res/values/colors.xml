@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="switchColor">#008A06</color>
+    <color name="statusBarColor">#E64A19</color>
+    <color name="headerTextColor">#000000</color>
+</resources>

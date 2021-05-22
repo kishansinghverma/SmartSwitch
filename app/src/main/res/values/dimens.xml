@@ -1,0 +1,10 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="cardHeight">150dp</dimen>
+    <dimen name="cardWidth">110dp</dimen>
+    <dimen name="imageHeight">70dp</dimen>
+    <dimen name="imageWidth">70dp</dimen>
+    <dimen name="divTextSize">15dp</dimen>
+    <dimen name="spaceSize">12dp</dimen>
+    <dimen name="cardMargin">8dp</dimen>
+</resources>
