@@ -55,7 +55,7 @@ public class SplashScreen extends AppCompatActivity {
 
     public void connectToLocal() {
         infoText.setText("Trying for local connection...");
-        final MqttAndroidClient client = new MqttAndroidClient(getApplicationContext(), "tcp://192.168.1.100", MqttClient.generateClientId());
+        final MqttAndroidClient client = new MqttAndroidClient(getApplicationContext(), "tcp://192.168.2.100", MqttClient.generateClientId());
 
         try {
             IMqttToken token = client.connect(localConnectOptions);
